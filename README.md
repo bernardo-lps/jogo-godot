@@ -8,6 +8,12 @@
 
 <h2>Como Jogar</h2>
 <p>
+  Tecla A: Andar para a esquerda
+  Tecla D: Andar para a direita
+  Tecla E: Interagir
+  Tecla Space: Pular
+</p>
+<p>
   O jogo é dividido em <strong>3 fases</strong>. O mecanismo principal é a decodificação de mensagens usando a <strong>Cifra de César</strong> (uma técnica que desloca as letras do alfabeto).
 </p>
 <ul>
