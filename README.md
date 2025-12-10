@@ -8,9 +8,9 @@
 
 <h2>Como Jogar</h2>
 <p>
-  Tecla A: Andar para a esquerda
-  Tecla D: Andar para a direita
-  Tecla E: Interagir
+  Tecla A: Andar para a esquerda<br>
+  Tecla D: Andar para a direita<br>
+  Tecla E: Interagir<br>
   Tecla Space: Pular
 </p>
 <p>
