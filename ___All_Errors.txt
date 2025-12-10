@@ -1,0 +1,14 @@
+CorrelationId: a5c805d6-ba41-4a3c-a789-cba57604f2f8
+UTC DateTime: 12/09/2025 14:39:05
+
+The following files/folders have not been downloaded
+0. .godot/editor/favorite_properties
+1. .godot/editor/favorites
+2. .godot/editor/favorites.Node
+3. .godot/editor/favorites.Resource
+4. .godot/scene_groups_cache.cfg
+5. chave-do-arauto/.godot/editor/favorite_properties
+6. chave-do-arauto/.godot/editor/favorites
+7. chave-do-arauto/.godot/editor/favorites.Node
+8. chave-do-arauto/.godot/editor/favorites.Resource
+9. chave-do-arauto/.godot/scene_groups_cache.cfg

@@ -1,0 +1,104 @@
+[gd_scene load_steps=19 format=3 uid="uid://6wf77212ouxb"]
+
+[ext_resource type="Script" uid="uid://dwy4attk6vqn2" path="res://scripts/Level3.gd" id="1_iw2mh"]
+[ext_resource type="Texture2D" uid="uid://quyyc2nllbuo" path="res://art/Tiles/tile1.png" id="2_opw0y"]
+[ext_resource type="Texture2D" uid="uid://bx1ddujhkusqq" path="res://art/Objects/box.png" id="3_g7sqe"]
+[ext_resource type="Texture2D" uid="uid://cyk1x3jym7y0y" path="res://art/Tiles/tile20.png" id="4_turoa"]
+[ext_resource type="PackedScene" uid="uid://dy5iqosyq6ntk" path="res://scenes/Guts.tscn" id="5_1fmh2"]
+[ext_resource type="PackedScene" uid="uid://il4p2k8qlcwx" path="res://scenes/objects/Oracle.tscn" id="6_t3dp5"]
+[ext_resource type="PackedScene" uid="uid://cdjktmf7qh4mv" path="res://scenes/Door.tscn" id="7_kid5y"]
+[ext_resource type="PackedScene" uid="uid://cs1eyfiotw23k" path="res://scenes/characters/NPC.tscn" id="8_qtcjj"]
+[ext_resource type="Script" uid="uid://cje3nqyd3hdf6" path="res://scripts/Saida.gd" id="9_rljsv"]
+[ext_resource type="Script" uid="uid://brgy6mbotpimw" path="res://scripts/DeathZone.gd" id="10_v36no"]
+[ext_resource type="PackedScene" uid="uid://b5kjfpy66xsg6" path="res://scenes/PauseMenu.tscn" id="11_opw0y"]
+[ext_resource type="AudioStream" uid="uid://cw3f7nnppas4n" path="res://art/Magicka Soundtrack 6_ Boss Battle.mp3" id="12_g7sqe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g83o"]
+texture = ExtResource("2_opw0y")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hlk0d"]
+texture = ExtResource("3_g7sqe")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0uv0p"]
+texture = ExtResource("4_turoa")
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_d1c63"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_7g83o")
+sources/2 = SubResource("TileSetAtlasSource_hlk0d")
+sources/3 = SubResource("TileSetAtlasSource_0uv0p")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3faq"]
+size = Vector2(10, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygioq"]
+size = Vector2(565, 54)
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_iw2mh")
+
+[node name="Map" type="TileMap" parent="."]
+position = Vector2(0, 213)
+tile_set = SubResource("TileSet_d1c63")
+format = 2
+layer_0/tile_data = PackedInt32Array(196608, 3, 2, 196609, 65539, 2, 196610, 131075, 2, 196613, 131075, 2, 196614, 3, 2, 196616, 131075, 2, 196617, 3, 2, 196618, 65539, 2, 196619, 131075, 2, 196611, 3, 2, 196612, 65539, 2, 196615, 65539, 2)
+
+[node name="Guts" parent="." instance=ExtResource("5_1fmh2")]
+position = Vector2(-11, 200)
+
+[node name="Oracle" parent="." instance=ExtResource("6_t3dp5")]
+position = Vector2(130, 259)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+
+[node name="Door" parent="." instance=ExtResource("7_kid5y")]
+position = Vector2(165, 256)
+
+[node name="NPC" parent="." instance=ExtResource("8_qtcjj")]
+position = Vector2(56, 250)
+
+[node name="NPC2" parent="." instance=ExtResource("8_qtcjj")]
+position = Vector2(86, 250)
+
+[node name="Saida" type="Area2D" parent="."]
+script = ExtResource("9_rljsv")
+proxima_cena = "uid://csteqj8x5m7ge"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saida"]
+position = Vector2(168, 249.5)
+shape = SubResource("RectangleShape2D_b3faq")
+
+[node name="DeathZone" type="Area2D" parent="."]
+script = ExtResource("10_v36no")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(282.5, 304)
+shape = SubResource("RectangleShape2D_ygioq")
+
+[node name="PauseMenu" parent="." instance=ExtResource("11_opw0y")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_g7sqe")
+autoplay = true

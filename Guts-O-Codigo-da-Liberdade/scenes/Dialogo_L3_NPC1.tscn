@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cppofwhf1xu4b"]
+
+[ext_resource type="Script" uid="uid://crvmn48dcp6jd" path="res://scripts/Dialogo_L3_NPC1.gd" id="1_na1r7"]
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_na1r7")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.080910854, 0.30834058, 0.4899697, 1)
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 680.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 681.0

@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://csteqj8x5m7ge"]
+
+[ext_resource type="Script" uid="uid://bdjcslre7f2vq" path="res://scripts/EndGame.gd" id="1_i47uf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hbvkc"]
+font_size = 44
+font_color = Color(0.6922373, 0.6922373, 0, 1)
+outline_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i47uf"]
+font_size = 20
+font_color = Color(0.86036915, 0.8603692, 0.8603691, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_i47uf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14743, 0.0002940067, 0.31511196, 0.7058824)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.75
+offset_top = -70.0
+offset_right = 182.75
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Titulo" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "A GUERRA ACABOU"
+label_settings = SubResource("LabelSettings_hbvkc")
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Você decifrou os códigos e derrubou o Necromante."
+label_settings = SubResource("LabelSettings_i47uf")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "VOLTAR AO MENU"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "SAIR DO JOGO"

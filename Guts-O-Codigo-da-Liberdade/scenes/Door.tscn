@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdjktmf7qh4mv"]
+
+[ext_resource type="Script" uid="uid://dnsqlm42dxnr6" path="res://scripts/Door.gd" id="1_yfgsh"]
+[ext_resource type="Texture2D" uid="uid://dfa0o2h4os18c" path="res://art/Objects/door3.png" id="2_eyv6f"]
+[ext_resource type="Texture2D" uid="uid://b5j3xpcm5i5bp" path="res://art/Objects/door1.png" id="3_ao1jx"]
+[ext_resource type="Texture2D" uid="uid://kpcxe8euk0k5" path="res://art/Objects/door2.png" id="4_y7q0m"]
+[ext_resource type="Texture2D" uid="uid://c0h733rwxf55e" path="res://art/Objects/door4.png" id="5_4k7y2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyv6f"]
+size = Vector2(9, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mg2as"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eyv6f")
+}],
+"loop": true,
+"name": &"lock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ao1jx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y7q0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4k7y2")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_yfgsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -6.5)
+shape = SubResource("RectangleShape2D_eyv6f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mg2as")
+animation = &"lock"
+autoplay = "lock"

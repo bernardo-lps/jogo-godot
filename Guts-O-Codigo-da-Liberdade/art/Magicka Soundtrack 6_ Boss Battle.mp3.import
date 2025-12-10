@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw3f7nnppas4n"
+path="res://.godot/imported/Magicka Soundtrack 6_ Boss Battle.mp3-de7ff208305f5b1556abaf84f9d80ba6.mp3str"
+
+[deps]
+
+source_file="res://art/Magicka Soundtrack 6_ Boss Battle.mp3"
+dest_files=["res://.godot/imported/Magicka Soundtrack 6_ Boss Battle.mp3-de7ff208305f5b1556abaf84f9d80ba6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

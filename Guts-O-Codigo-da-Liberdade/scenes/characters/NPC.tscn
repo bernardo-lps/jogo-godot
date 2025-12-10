@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://cs1eyfiotw23k"]
+
+[ext_resource type="Script" uid="uid://cpujgaywurfat" path="res://scripts/NPC.gd" id="1_8qfha"]
+[ext_resource type="Texture2D" uid="uid://dbskpcoapkifs" path="res://art/EVil Wizard 2/Sprites/Idle.png" id="2_hnoa0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h77o4"]
+size = Vector2(38, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2a5c"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqela"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i74hb"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm3ww"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n732b"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vid2s"]
+atlas = ExtResource("2_hnoa0")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_repgl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2a5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqela")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i74hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm3ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n732b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vid2s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NPC" type="Area2D"]
+script = ExtResource("1_8qfha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -21.5)
+shape = SubResource("RectangleShape2D_h77o4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -38.5)
+scale = Vector2(1, 1.156)
+sprite_frames = SubResource("SpriteFrames_repgl")
+animation = &"idle"
+autoplay = "idle"

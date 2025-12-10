@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk0icb7fgpjeo"
+path="res://.godot/imported/Magicka Soundtrack 1_ Idle browsing.mp3-b13db12c52a4a298bdb620a462e1513d.mp3str"
+
+[deps]
+
+source_file="res://Magicka Soundtrack 1_ Idle browsing.mp3"
+dest_files=["res://.godot/imported/Magicka Soundtrack 1_ Idle browsing.mp3-b13db12c52a4a298bdb620a462e1513d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://cy4p7fc53whf3"]
+
+[ext_resource type="Texture2D" uid="uid://ci40c2x3koai2" path="res://art/oracle/book_sheet.png" id="1_m22vg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyt6n"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3a4a"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f065c"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6vab"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3orn8"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5geu"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfu6b"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fc1f"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6d6e"]
+atlas = ExtResource("1_m22vg")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smd8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyt6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3a4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f065c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6vab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3orn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5geu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfu6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fc1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6d6e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihcx3"]
+size = Vector2(51, 31)
+
+[node name="falseOracle" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.5, -1.5)
+scale = Vector2(0.921875, 0.953125)
+sprite_frames = SubResource("SpriteFrames_smd8c")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 6.5)
+shape = SubResource("RectangleShape2D_ihcx3")

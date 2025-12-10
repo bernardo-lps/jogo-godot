@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnwxyqm18ysd8"]
+
+[ext_resource type="Script" uid="uid://bljk42uyf4nu2" path="res://scripts/DialogueBox_Level2.gd" id="1_2em8f"]
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_2em8f")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.080910854, 0.30834058, 0.4899697, 1)
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 680.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 681.0
